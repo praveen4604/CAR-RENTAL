@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Option</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url(background_img.jpg);
+            background-blend-mode: darken;
+            background-size:cover ;
+            background-color: #fff;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: black;
+        }
+        .options {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .option {
+            margin: 0 20px;
+        }
+        .option label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .option input[type="radio"] {
+            margin-right: 5px;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Choose Your Option</h1>
+        <form action="demo.html" >
+        <form id="optionForm">
+            <div class="options" >
+                    <p>Due to some issues we can't provide driver to your trip please choose without driver option...</p>
+                <div class="option">
+                    <input type="radio" id="withoutDriver" name="option" value="withoutDriver">
+                    <label for="withoutDriver">Without Driver</label>
+                </div>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </form>
+    </div>
+
+    <script>
+        document.getElementById("optionForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var selectedOption = document.querySelector('input[name="option"]:checked').value;
+            if (selectedOption === "withDriver") {
+                alert("You choose 'With Driver'");
+                // Redirect or perform any other action here
+            } else if (selectedOption === "withoutDriver") {
+                alert("You choose 'Without Driver'");
+                // Redirect or perform any other action here
+            }
+        });
+    </script>
+</body>
+</html>

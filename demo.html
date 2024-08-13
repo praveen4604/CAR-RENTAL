@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental Booking</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url(background_img.jpg);
+    background-blend-mode: darken;
+    background-size:cover ;
+    background-position: center;
+}
+
+header, footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    margin-left: 75%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+select {
+    width: 60%;
+    padding: 9px;
+    border: 1px solid #ff6803;
+    border-radius: 5px;
+    margin-left: 15%;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff6803;
+    color: #070707;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 15%;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="color:rgb(255, 183, 0);">Car Rental Booking</h1>
+    </header>
+    <main>
+        <form id="booking-form">
+            <div class="form-group">
+                <label for="car">Select Car:</label>
+                <select id="car" name="car" required>
+                    <option value="">Select Car</option>
+                    <option value="car1">Car 1 - Audi a5</option>
+                    <option value="car2">Car 2 - Benz c36</option>
+                    <option value="car2">Car 3 - Creta</option>
+                    <option value="car2">Car 4 - Jaguar</option>
+                    <option value="car2">Car 5 - MG</option>
+                    <option value="car2">Car 6 - Mini Cooper</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="start-date">Start Date:</label>
+                <input type="date" id="start-date" name="start-date" required>
+            </div>
+            <div class="form-group">
+                <label for="end-date">End Date:</label>
+                <input type="date" id="end-date" name="end-date" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <button type="button" onclick="proceedToPayment()">Proceed to Payment</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        &copy;  2024 Rental Car Showcase
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
